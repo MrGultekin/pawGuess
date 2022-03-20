@@ -85,7 +85,7 @@ document.querySelector('.score').textContent = 10;
 document.querySelector('.guess').value = 23;
 console.log(document.querySelector('.guess').value);
 */
-let secretNumber = Math.trunc(Math.random() * 100) + 1;
+let secretNumber = Math.trunc(Math.random() * 5) + 1;
 console.log(secretNumber);
 
 let score = 20;
