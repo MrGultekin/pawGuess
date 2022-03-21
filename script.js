@@ -3,15 +3,15 @@
 // Speech Recognition
 const msgEl = document.getElementById("msg");
 
-window.SpeechRecognition =
-  window.SpeechRecognition || window.webkitSpeechRecognition;
-
 // window.SpeechRecognition =
-//   window.webkitSpeechRecognition ||
-//   window.mozSpeechRecognition ||
-//   window.msSpeechRecognition ||
-//   window.oSpeechRecognition ||
-//   window.SpeechRecognition;
+//   window.SpeechRecognition || window.webkitSpeechRecognition;
+
+window.SpeechRecognition =
+  window.webkitSpeechRecognition ||
+  window.mozSpeechRecognition ||
+  window.msSpeechRecognition ||
+  window.oSpeechRecognition ||
+  window.SpeechRecognition;
 
 let recognition = new window.SpeechRecognition();
 

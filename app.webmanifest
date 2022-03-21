@@ -1,6 +1,6 @@
 {
-  "name": "Jot Masters, best ever App to note it down.",
-  "short_name": "Jot Masters",
+  "name": "Guess What!...",
+  "short_name": "Guest Masters",
   "start_url": "./?utm_source=pwa",
   "theme_color": "#ffc252",
   "scope": "./",
@@ -23,7 +23,7 @@
           "purposes": "maskable"
     }
   ],
-  "description": "This app lets you add notes while you are coding",
+  "description": "This app ll make your day.",
     "screenshots": [
       {
         "src": "icons/screenshot.png",
