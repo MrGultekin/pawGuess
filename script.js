@@ -9,6 +9,7 @@ const voiceBtn = document.querySelector(".btn-voice");
 const manualBtn = document.querySelector(".btn-manual");
 const btnContainer = document.querySelector("#btn-container");
 const scoreEl = document.querySelector(".score");
+const highScoreEl = document.querySelector(".highScore");
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
 console.log(secretNumber);
 let score = 20;
@@ -74,6 +75,7 @@ function checkNumber(voiceMsg) {
     if (score > highScore) {
       highScore = score;
       document.querySelector(".highScore").textContent = highScore;
+      localStorage.setItem("highScoreValue", highScore);
     }
   } else if (num !== secretNumber) {
     if (score > 1) {
@@ -131,6 +133,20 @@ guessEl.addEventListener("keyup", myFunction);
 const checkEl = document.querySelector(".check");
 checkEl.addEventListener("click", myFunction);
 
+// 4 LocalStorage
+
+const localStorageFunction = () => {
+  const myLocalStorage = localStorage.getItem("highScoreValue");
+  if (myLocalStorage) {
+    highScoreEl.innerHTML = myLocalStorage;
+  }
+};
+localStorageFunction();
+// const myLocalStorage = localStorage.getItem('highScoreValue');
+// if (myLocalStorage){
+//   highScoreEl.innerHTML = myLocalStorage;
+// }
+
 function myFunction(event) {
   if (event.key === "Enter" || event.target.className === "btn check") {
     console.log(event);
@@ -163,7 +179,12 @@ function myFunction(event) {
 
       if (score > highScore) {
         highScore = score;
-        document.querySelector(".highScore").textContent = highScore;
+
+        highScoreEl.textContent = highScore;
+        // 4 Local Storage starts
+        localStorage.setItem("highScoreValue", highScore);
+        // highScore.innerHTML = localStorage.getItem('highScoreValue');
+        // 4 Local Storage ends
       }
 
       // When guess is wrong
