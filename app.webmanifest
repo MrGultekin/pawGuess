@@ -3,6 +3,7 @@
   "short_name": "Guest Masters",
   "start_url": "./?utm_source=pwa",
   "theme_color": "#ffc252",
+  "background_color": "#ffc252",
   "scope": "./",
   "display": "standalone",
   "icons": [
@@ -17,18 +18,18 @@
       "type": "image/png"
     },
     {
-          "src": "icons/icon-maskable.png",
-          "sizes": "512x512",
-          "type": "image/png",
-          "purposes": "maskable"
+      "src": "icons/icon-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ],
   "description": "This app ll make your day.",
-    "screenshots": [
-      {
-        "src": "icons/screenshot.png",
-        "sizes": "1170x2532",
-        "type": "image/png"
-      }
-    ]
+  "screenshots": [
+    {
+      "src": "icons/screenshot.png",
+      "sizes": "1170x2532",
+      "type": "image/png"
+    }
+  ]
 }
